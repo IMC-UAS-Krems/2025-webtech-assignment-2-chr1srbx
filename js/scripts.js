@@ -126,7 +126,9 @@ function validateAndSubmit() {
 
 function calculateFinal(name, email) {
     let subtotal = 0;
-    cart.forEach(item => subtotal += item.price);
+    cart.forEach(function(item) {
+        subtotal += item.price;
+    });
     
     let discount = 0;
     if (cart.length >= 3) {
